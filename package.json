@@ -1,0 +1,14 @@
+{
+  "name": "burn-it-down",
+  "version": "0.0.1",
+  "description": "A command-line tool for generating burndown charts from project data.",
+  "author": "Rui Ferrão <rui@ferrao.dev>",
+  "main": "plot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "skia-canvas": "^3.0.8"
+  }
+}
