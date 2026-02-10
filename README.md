@@ -89,6 +89,8 @@ Each task must have:
 
 ## Chart Output
 
+![Example Burndown Chart](examples/chart.png)
+
 The generated chart displays:
 - **Blue line**: Ideal burndown (linear progression from total scope to zero)
 - **Red line**: Actual progress based on task completion dates
