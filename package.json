@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "chart.js": "^4.5.1",
+    "fs-extra": "^11.3.3",
     "skia-canvas": "^3.0.8"
   }
 }

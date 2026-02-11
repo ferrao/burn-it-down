@@ -86,7 +86,29 @@ const idealPoints = timelineLabels.map((label, index) => {
 });
 
 // ==========================================
-// 4. CHART GENERATION
+// 4. DEBUG LOGGING
+// ==========================================
+console.log("=== DEBUG: Data Analysis ===");
+console.log(`Total Scope: ${totalScope} points`);
+console.log(`Timeline: ${start.toISOString().split("T")[0]} to ${end.toISOString().split("T")[0]}`);
+console.log(`Total Days: ${(end - start) / oneDay}`);
+console.log(`\nActual Points (${actualPoints.length}):`);
+actualPoints.forEach((p, i) => {
+  console.log(`  [${i}] Day ${p.x}: ${p.y} points remaining`);
+});
+console.log(`\nIdeal Points (first 5 and last 5):`);
+idealPoints.slice(0, 5).forEach((p, i) => {
+  console.log(`  [${i}] Day ${p.x}: ${p.y.toFixed(2)} points`);
+});
+console.log("  ...");
+idealPoints.slice(-5).forEach((p, i) => {
+  const actualIndex = idealPoints.length - 5 + i;
+  console.log(`  [${actualIndex}] Day ${p.x}: ${p.y.toFixed(2)} points`);
+});
+console.log("===========================\n");
+
+// ==========================================
+// 5. CHART GENERATION
 // ==========================================
 async function generateChart() {
   const canvas = new Canvas(1000, 600);
